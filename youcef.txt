@@ -1,0 +1,13 @@
+Program sbvhs
+PDEC
+@define Pint riad=5.5 ;
+fhfh : Pfloat ;
+fhfh : Pint ;
+PINST
+Begin
+DO IF (kdjhvs < cwjcnj) ELSE  ENDELSE 
+azpect <-- 4.9 / 0 ;
+fhfh <-- 49999999999999 ;
+FOR youx <-- said WHILE mehdi DO ENDFOR
+//eebvjsbjvksbskbhvbdhjd
+End
