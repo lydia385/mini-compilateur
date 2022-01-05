@@ -9,6 +9,7 @@ PINST
 Begin
 DO IF (tizi < thiziri | riad < youcef ) ELSE  ENDELSE 
 fhfh <-- 49.999 ;
+fhfh <-- 49999999999999 ;
 youcef <-- 4.9 / 0 ;
 /* this is a 
 multi com  */

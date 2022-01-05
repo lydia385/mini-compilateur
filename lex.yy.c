@@ -760,7 +760,7 @@ YY_RULE_SETUP
 {yylval.num=atoi(yytext);
         if ( (yylval.num>-32769)&&(yylval.num<32768)) 
         {yylval.num=atoi(yytext);col=col+yyleng; return int1;}
-        else printf("erreur lexicale la valeur de l'entier depasse la plage specifiee"); return int1;}
+        else printf("erreur lexicale la valeur de l'entier depasse la plage specifiee\n"); return int1;}
 	YY_BREAK
 case 16:
 YY_RULE_SETUP

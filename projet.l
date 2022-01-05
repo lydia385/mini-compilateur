@@ -40,7 +40,7 @@ ENDFOR     {col=col+yyleng;return endfor;}
 {int1}     {yylval.num=atoi(yytext);
         if ( (yylval.num>-32769)&&(yylval.num<32768)) 
         {yylval.num=atoi(yytext);col=col+yyleng; return int1;}
-        else printf("erreur lexicale la valeur de l'entier depasse la plage specifiee"); return int1;}
+        else printf("erreur lexicale la valeur de l'entier depasse la plage specifiee\n"); return int1;}
 {float1}   {yylval.numf=atof(yytext);return float1;}
 {idf}      {if (yyleng<=12) {yylval.str=strdup(yytext);return idf;} }
 ":"        {col+=yyleng;return dpt;}
