@@ -1,13 +1,17 @@
-Program sbvhs
+Program bourikou
 PDEC
-@define Pint riad=5.5 ;
-fhfh : Pfloat ;
-fhfh : Pint ;
+@define Pint riad=5 ;
+@define Pfloat aymen=5.1 ;
+yasmine | thiziri : Pfloat ;
+youcef : Pfloat;
+fhfh : Pint;
 PINST
 Begin
-DO IF (kdjhvs < cwjcnj) ELSE  ENDELSE 
-azpect <-- 4.9 / 0 ;
-fhfh <-- 49999999999999 ;
-FOR youx <-- said WHILE mehdi DO ENDFOR
+DO IF (tizi < thiziri | riad < youcef ) ELSE  ENDELSE 
+fhfh <-- 49.999 ;
+youcef <-- 4.9 / 0 ;
+riad <-- 6;
+FOR youcef <-- 5 WHILE 6 DO youcef <-- 3.1 ; ENDFOR
 //eebvjsbjvksbskbhvbdhjd
+
 End

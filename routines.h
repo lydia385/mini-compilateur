@@ -18,8 +18,8 @@ void push_end(char n[],char ty,char nat){
     {
         list = tete;
         strcpy(list->name,n);
-        if(ty=='i'){ strcpy(list->type,"int");  }
-        else if(ty=='f'){strcpy(list->type,"float");}  
+        if(ty=='i'){ strcpy(list->type,"Pint");  }
+        else if(ty=='f'){strcpy(list->type,"Pfloat");}  
         list->nature= nat;
         list->next = NULL;
         return;
@@ -31,8 +31,8 @@ void push_end(char n[],char ty,char nat){
     }
         temp->next = tete;
         strcpy(tete->name,n);
-        if(ty=='i'){strcpy(tete->type,"int");}
-        else if(ty=='f'){strcpy(tete->type,"float");}
+        if(ty=='i'){strcpy(tete->type,"Pint");}
+        else if(ty=='f'){strcpy(tete->type,"Pfloat");}
         tete->nature= nat;
         tete->next = NULL;
         }
@@ -40,13 +40,13 @@ Liste search (char name[]){
    Liste l = list;
     while((l!= NULL) && (strcmp(l->name,name) != 0)){
            l = l->next;}
-return l;
+   return l;
 }
 void push(char name[],char ty,int nat)
     {
      if (search(name) == NULL) push_end(name,ty,nat); 
      else {
-         printf("erreur : double declaration \n");
+         printf("erreur : double declaration de %s \n", name);
      }
      }
      

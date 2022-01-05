@@ -52,8 +52,8 @@ ENDFOR     {col=col+yyleng;return endfor;}
 "=="       {col+=yyleng;return egeg;}
 ">="       {col+=yyleng;return supeg;}
 "!="       {col+=yyleng;return noteg;}
-"&"        {col+=yyleng;return et;}
-"|"        {col+=yyleng;return ou;}
+" &  "        {col+=yyleng;return et;}
+" | "        {col+=yyleng;return ou;}
 ";"        {col+=yyleng;return ptveg;}
 ")"        {col+=yyleng;return pf;}
 "("        {col+=yyleng;return pd;}
