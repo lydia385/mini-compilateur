@@ -6,16 +6,20 @@ int  nbligne = 1;
 int  col = 0;
  extern YYSTYPE yylval;
 %}
-lettres [a-zA-Z]
+lettres [a-z]
 chiffres [0-9]
 idf [a-z]("_"|[a-z]|{chiffres})([a-z]|{chiffres})+
 int1  "-"?{chiffres}+
 float1 "-"?({chiffres}+)(".")({chiffres}+)
 NL (\r\n)|(\n)
 SPACES [ \t]+
+TEXT ({chiffres}|{lettres})
+Type (Pfloat)|(Pint)
+
+FC \/\*
+DC \*\/
 comment1 \/\*(.|\n)*\*\/
 comment2 \/\/.*\n
-Type (Pfloat)|(Pint)
 
 %%
 @define    {col=col+yyleng;return define;}
@@ -59,8 +63,18 @@ ENDFOR     {col=col+yyleng;return endfor;}
 "("        {col+=yyleng;return pd;}
 {NL}       { nbligne++;col=0;}
 {SPACES}   { col+= yyleng;   }
-{comment2} {nbligne++;col=0;}
 
+{comment1} {char* str = yytext;
+            int i = 0;
+            char *pch=strchr(str,'\n');
+            while (pch!=NULL) {
+                  i++;
+                  pch=strchr(pch+1,'\n');
+                  }
+            nbligne+=i;
+            col=0;
+            }
+{comment2} {nbligne++; col=0;}
 .        {printf("erreur lexiqual ligne %d collone %d \n",nbligne,col);col+=yyleng;}
 %%
 int yywrap(void)

@@ -10,7 +10,9 @@ Begin
 DO IF (tizi < thiziri | riad < youcef ) ELSE  ENDELSE 
 fhfh <-- 49.999 ;
 youcef <-- 4.9 / 0 ;
-riad <-- 6;
+/* iosisjoj 
+hjhahjcjagg */
+riad <-- 6 ;
 FOR youcef <-- 5 WHILE 6 DO youcef <-- 3.1 ; ENDFOR
 //eebvjsbjvksbskbhvbdhjd
 
